@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafsay Food</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>  
+    <nav>
+      <h1 class="logo">Hafsay Food</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="hero">
+    <h2>Delicious Meals Delivered Fast</h2>
+    <p>Order fresh and tasty food from Hafsay Food.</p>
+    <button onclick="scrollToMenu()">Order Now</button>
+  </section>
+
+  
+  <section id="menu">
+    <h2 style="color: #a31621;">Our Menu</h2>
+    <div class="menu-container">
+      <div class="food-card">
+        <img src="b.jpg" alt="Burger">
+        <h3>Burger</h3>
+        &#8358<p>5000</p>
+        <button onclick="addToCart('Burger', 5000)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="m.jpg" alt="Milk Cake">
+        <h3>  Milk Cake</h3>
+        &#8358<p> 4500</p>
+        <button onclick="addToCart('Milk Cake', 4500)">Add to Cart</button>
+      </div>
+      <div class="food-card">
+        <img src="g.jpg" alt="Rice">
+        <h3>Glazed Puff Puff</h3>
+        &#8358<p>3000</p>
+        <button onclick="addToCart('Glazed Puff Puff', 3000)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart -->
+  <section id="cart">
+    <h2 style="color: #a31621;">Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3 style="color: #a31621;">Total: &#8358<span id="cart-total">0</span></h3>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 style="color: #a31621;">Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: hafsyfood@gmail.com | Phone: +234 815 842 9732</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hafsay Food. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
